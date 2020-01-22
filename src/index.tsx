@@ -30,7 +30,7 @@ const AppComponent: FC<{
 }> = ({ title, name, age, onClickButton1, onClickButton2 }) => (
   <div>
     <h1>{title}</h1>
-    <h2>{name}, {age}</h2>
+    <h2>name: {name}, age: {age}</h2>
     <button onClick={() => onClickButton1('clicked!!')}>button1</button>
     <button onClick={() => onClickButton2(100)}>button2</button>
   </div>
