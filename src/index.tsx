@@ -10,6 +10,11 @@ type ConnectedComponentFactory<ConnectedProps> =
     Component: React.ComponentType<P>,
   ) => React.ComponentType<Pick<P, Exclude<keyof P, keyof ConnectedProps>>>;
 
+// type ConnectedComponentFactory<ConnectedProps> =
+//   <P extends ConnectedProps>(
+//     Component: React.ComponentType<P>,
+//   ) => React.ComponentType<P>
+
 declare function connect<StateProps, DispatchProps>(
   mapStateToProps: (state: any) => StateProps,
   mapDispatchToProps: () => DispatchProps,
